@@ -1,24 +1,20 @@
-var output = ""
-
 function pigLatinizer(sentence) {
-  output = ""
+  var output = ""
   var inputArray = sentence.split(" ");
   inputArray.forEach(function(word){
     var wordArray = word.split("")
     for (i=0; i<word.length; i++){
       var letter = wordArray[i]
-      if ("a" === letter || "e" === letter || "i" === letter || "o" === letter || "u" === letter || "q" === letter || "A" === letter || "E" === letter || "I" === letter || "O" === letter || "U" === letter || "Q" === letter) {
-        if (i === 0){
-          if (letter === "q" || letter === "Q") {
-            var quack = wordArray[i+1];
-            wordArray.push(letter + quack);
-            wordArray.push("ay");
-            wordArray.splice(0,2);
-            break;
-          } else {
-            wordArray.push("way");
-            break;
-          }
+      if (letter.match(/(a|e|i|o|u|q)/gi)) {
+        if (letter.match(/(q)/gi)) {
+          var quack = wordArray[i+1];
+          wordArray.push(letter + quack);
+          wordArray.push("ay");
+          wordArray.splice(0,2);
+          break;
+        } else if (word.match(/^(a|e|i|o|u)/gim)) {
+          wordArray.push("way");
+          break;
         } else {
           wordArray.push("ay");
           wordArray.splice(0,i);
