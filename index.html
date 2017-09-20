@@ -6,20 +6,22 @@
     <link rel="stylesheet" href="css/master.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <title>Pig Latin</title>
+    <title>Pig Latinizer</title>
   </head>
   <body>
     <div class="container">
-      <div class="panel panel-default">
-        <h1 class="well">Pig Latin Translator</h1>
-        <div class="panel-body">
+      <div id="thepanel">
+        <h1>Pig Latinizer</h1>
+        <div>
           <form id="pigLatin" action="index.html" method="post">
             <input id="userInput" type="text" placeholder="Enter your sentence">
             <button type="submit" name="button" class="btn-danger">Make it Piggy!</button>
           </form>
-          <div class="output">
-
-          </div>
+        </div>
+      </div>
+      <div class="output">
+        <div class="ourdiv">
+          <img src="img/pig.svg" class="ourgraphic">
         </div>
       </div>
     </div>

@@ -37,7 +37,9 @@ $(document).ready(function(){
   $("form#pigLatin").submit(function(event){
     event.preventDefault();
     var userInput = $("#userInput").val();
-    $(".output").text(pigLatinizer(userInput));
+    $(".output").show()
+    $("#thepanel").hide()
+    $(".output").append('" ' + pigLatinizer(userInput) + '"');
   });
 });
 

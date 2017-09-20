@@ -1,0 +1,15 @@
+.output {
+  display: none;
+  font-size: 70px;
+  text-align: center;
+}
+.ourdiv {
+  width: 60%;
+  margin-left: 20%;
+}
+body {
+  background-color: pink;
+}
+.container {
+  background-color: pink;
+}
