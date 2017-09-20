@@ -24,7 +24,11 @@ function pigLatinizer(sentence) {
         wordArray.push(letter);
       }
     };
-    output = output + wordArray.join("") + " ";
+    if (sentence.match(/[0-9]/g)){
+      output = "Orrysay, Iway on'tday orkway ithway umbersnay!"
+    } else {
+      output = output + wordArray.join("") + " ";
+    }
   });
   return output;
 }
